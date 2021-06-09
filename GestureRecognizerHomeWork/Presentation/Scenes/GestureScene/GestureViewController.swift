@@ -9,16 +9,18 @@ import UIKit
 
 class GestureViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var xCoordinatLabel: UILabel!
     @IBOutlet weak var yCoordinatLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    // MARK: - Variables
     var gestureTag = Int()
-    
     static private var pressStartTime: TimeInterval = 0.0
     static private var imageViewTranslationX: CGFloat = 0
     static private var imageViewTranslationY: CGFloat = 0
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,7 @@ class GestureViewController: UIViewController {
         handleTappedChoice()
     }
     
+    // MARK: - Handle Choosed Gesture
     func handleTappedChoice() {
         switch gestureTag {
         case 0:
@@ -45,6 +48,7 @@ class GestureViewController: UIViewController {
         }
     }
 
+    // MARK: - Setup Gestures
     func panGesture() {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         imageView.addGestureRecognizer(panGesture)
@@ -83,9 +87,25 @@ class GestureViewController: UIViewController {
         imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         imageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
+    
+    // MARK: - Pinch Gesture Handler Helpers
+    private func checkSuperViewBounds() {
+        let intersection = imageView.superview!.bounds.intersection(imageView.frame)
+        if !intersection.equalTo(imageView.frame) {
+            returnImageToOriginalSize()
+        }
+    }
+    
+    private func returnImageToOriginalSize() {
+        UIView.animate(withDuration: 0.3) {
+            self.imageView.transform = .identity
+        }
+    }
 }
 
+// MARK: - Gesture Handlers
 extension GestureViewController {
+    
     @objc private func handlePan(_ gesture: UIPanGestureRecognizer) {
         
         let translation = gesture.translation(in: self.view)
@@ -152,11 +172,7 @@ extension GestureViewController {
         switch gesture.state {
         case .changed:
             imageView.transform = CGAffineTransform(scaleX: gesture.scale, y: gesture.scale)
-            
-        case .ended:
-            UIView.animate(withDuration: 0.3) {
-                self.imageView.transform = .identity
-            }
+            checkSuperViewBounds()
         default:
             break
         }
