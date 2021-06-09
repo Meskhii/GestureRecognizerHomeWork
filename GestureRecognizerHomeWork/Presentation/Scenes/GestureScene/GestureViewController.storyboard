@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q3z-s4-swC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gesture View Controller-->
+        <scene sceneID="HWc-jZ-GWs">
+            <objects>
+                <viewController storyboardIdentifier="GestureViewController" id="q3z-s4-swC" customClass="GestureViewController" customModule="GestureRecognizerHomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rBw-wy-0Jp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programmers" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-3V-8PL">
+                                <rect key="frame" x="107" y="642" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EaZ-Z2-YcK"/>
+                                    <constraint firstAttribute="height" constant="200" id="IwQ-KF-u83"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wMH-ba-d7a">
+                                <rect key="frame" x="186" y="438" width="42" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8y-vG-Td4">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHe-Af-Zad">
+                                        <rect key="frame" x="26" y="0.0" width="16" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qAj-oF-mCY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wMH-ba-d7a" firstAttribute="centerX" secondItem="rBw-wy-0Jp" secondAttribute="centerX" id="8OK-as-GOs"/>
+                            <constraint firstItem="wMH-ba-d7a" firstAttribute="centerY" secondItem="rBw-wy-0Jp" secondAttribute="centerY" id="VD5-B6-C9U"/>
+                            <constraint firstItem="qAj-oF-mCY" firstAttribute="bottom" secondItem="Xr7-3V-8PL" secondAttribute="bottom" constant="20" id="nVm-jS-cis"/>
+                            <constraint firstItem="Xr7-3V-8PL" firstAttribute="centerX" secondItem="rBw-wy-0Jp" secondAttribute="centerX" id="paR-gn-CWH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="xCoordinatLabel" destination="W8y-vG-Td4" id="Sq7-TA-aAq"/>
+                        <outlet property="yCoordinatLabel" destination="AHe-Af-Zad" id="FIF-q9-i1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhD-Ti-qkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.91304347826087" y="194.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="programmers" width="712" height="707"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

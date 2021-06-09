@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		84B1453D2670DE1B002C405C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1453C2670DE1B002C405C /* AppDelegate.swift */; };
 		84B1453F2670DE1B002C405C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1453E2670DE1B002C405C /* SceneDelegate.swift */; };
-		84B145412670DE1B002C405C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B145402670DE1B002C405C /* ViewController.swift */; };
-		84B145442670DE1B002C405C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B145422670DE1B002C405C /* Main.storyboard */; };
+		84B145412670DE1B002C405C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B145402670DE1B002C405C /* MainViewController.swift */; };
+		84B145442670DE1B002C405C /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B145422670DE1B002C405C /* MainViewController.storyboard */; };
 		84B145462670DE21002C405C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B145452670DE21002C405C /* Assets.xcassets */; };
 		84B145492670DE21002C405C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B145472670DE21002C405C /* LaunchScreen.storyboard */; };
+		84B145582670E1CE002C405C /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B145572670E1CE002C405C /* GestureViewController.swift */; };
+		84B1455C2670E1D9002C405C /* GestureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B1455B2670E1D9002C405C /* GestureViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84B145392670DE1B002C405C /* GestureRecognizerHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognizerHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1453C2670DE1B002C405C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B1453E2670DE1B002C405C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84B145402670DE1B002C405C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84B145432670DE1B002C405C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84B145402670DE1B002C405C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84B145432670DE1B002C405C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		84B145452670DE21002C405C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B145482670DE21002C405C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B1454A2670DE21002C405C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B145572670E1CE002C405C /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
+		84B1455B2670E1D9002C405C /* GestureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GestureViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +60,9 @@
 		84B1453B2670DE1B002C405C /* GestureRecognizerHomeWork */ = {
 			isa = PBXGroup;
 			children = (
-				84B145512670DEB2002C405C /* New Group */,
+				84B145512670DEB2002C405C /* Presentation */,
 				84B1453C2670DE1B002C405C /* AppDelegate.swift */,
 				84B1453E2670DE1B002C405C /* SceneDelegate.swift */,
-				84B145402670DE1B002C405C /* ViewController.swift */,
-				84B145422670DE1B002C405C /* Main.storyboard */,
 				84B145452670DE21002C405C /* Assets.xcassets */,
 				84B145472670DE21002C405C /* LaunchScreen.storyboard */,
 				84B1454A2670DE21002C405C /* Info.plist */,
@@ -68,11 +70,39 @@
 			path = GestureRecognizerHomeWork;
 			sourceTree = "<group>";
 		};
-		84B145512670DEB2002C405C /* New Group */ = {
+		84B145512670DEB2002C405C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				84B145542670E194002C405C /* Scenes */,
 			);
-			path = "New Group";
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		84B145542670E194002C405C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				84B145562670E1AD002C405C /* GestureScene */,
+				84B145552670E19D002C405C /* MainScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		84B145552670E19D002C405C /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				84B145402670DE1B002C405C /* MainViewController.swift */,
+				84B145422670DE1B002C405C /* MainViewController.storyboard */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		84B145562670E1AD002C405C /* GestureScene */ = {
+			isa = PBXGroup;
+			children = (
+				84B145572670E1CE002C405C /* GestureViewController.swift */,
+				84B1455B2670E1D9002C405C /* GestureViewController.storyboard */,
+			);
+			path = GestureScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +164,8 @@
 			files = (
 				84B145492670DE21002C405C /* LaunchScreen.storyboard in Resources */,
 				84B145462670DE21002C405C /* Assets.xcassets in Resources */,
-				84B145442670DE1B002C405C /* Main.storyboard in Resources */,
+				84B1455C2670E1D9002C405C /* GestureViewController.storyboard in Resources */,
+				84B145442670DE1B002C405C /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B145412670DE1B002C405C /* ViewController.swift in Sources */,
+				84B145582670E1CE002C405C /* GestureViewController.swift in Sources */,
+				84B145412670DE1B002C405C /* MainViewController.swift in Sources */,
 				84B1453D2670DE1B002C405C /* AppDelegate.swift in Sources */,
 				84B1453F2670DE1B002C405C /* SceneDelegate.swift in Sources */,
 			);
@@ -154,12 +186,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84B145422670DE1B002C405C /* Main.storyboard */ = {
+		84B145422670DE1B002C405C /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84B145432670DE1B002C405C /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		84B145472670DE21002C405C /* LaunchScreen.storyboard */ = {
